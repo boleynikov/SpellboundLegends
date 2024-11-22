@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : Singleton<PlayerHealth>
 {
@@ -8,10 +9,13 @@ public class PlayerHealth : Singleton<PlayerHealth>
     [SerializeField] private float knockBackThrustAmount = 10f;
     [SerializeField] private float damageRecoveryTime = 1f;
 
+    private Slider healthSlider;
     private int currentHealth;
     private bool canTakeDamage = true;
     private Knockback knockback;
     private Flash flash;
+
+    const string HEALTH_SLIDER_TEXT = "Health Slider";
 
     protected override void Awake() {
         base.Awake();
@@ -22,6 +26,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
     private void Start() {
         currentHealth = maxHealth;
+        UpdateHealthSlider();
     }
 
     private void OnCollisionStay2D(Collision2D other) {
@@ -35,6 +40,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     public void HealPlayer() {
         if (currentHealth < maxHealth) {
             currentHealth += 1;
+            UpdateHealthSlider();
         }
     }
 
@@ -48,11 +54,30 @@ public class PlayerHealth : Singleton<PlayerHealth>
         canTakeDamage = false;
         currentHealth -= damageAmount;
         StartCoroutine(DamageRecoveryRoutine());
+
+        UpdateHealthSlider();
+        CheckIfPlayerDeath();
+    }
+
+    private void CheckIfPlayerDeath() {
+        if (currentHealth <= 0) {
+            currentHealth = 0;
+            Debug.Log("Player Death");
+        }
     }
 
     private IEnumerator DamageRecoveryRoutine()
     {
         yield return new WaitForSeconds(damageRecoveryTime);
         canTakeDamage = true;
+    }
+
+    private void UpdateHealthSlider() {
+        if (healthSlider == null) {
+            healthSlider = GameObject.Find(HEALTH_SLIDER_TEXT).GetComponent<Slider>();
+        }
+        Debug.Log("currentHealth " + currentHealth + "from max " + maxHealth);
+        healthSlider.maxValue = maxHealth;
+        healthSlider.value = currentHealth;
     }
 }
