@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 092d28d43a66c544fa3341fd131e5295
+guid: 6b0088b459a4d814caceb06edf56f956
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,85 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_player_right_hit_0
+      name: Shadows_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb428cca9ebf754478397de88408ef04
-      internalID: -2141647527
+      spriteID: 283b4561b243ef641861479ee8f7d9bb
+      internalID: 917944642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_player_right_hit_1
+      name: Shadows_Sheet_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 16
         y: 0
-        width: 64
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 334f85b638b0b3248ad895aa3c85bc6f
-      internalID: -1579651841
+      spriteID: bf2cec542886a274db1383c9354736b4
+      internalID: 518700807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_player_right_hit_2
+      name: Shadows_Sheet_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 32
         y: 0
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9b04e84e0607d24980254bbd3172f3f
-      internalID: -150542870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_player_right_hit_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68ab0bb56b54eae4b8a87c4d1e92f20f
-      internalID: 2108612118
+      spriteID: 60a4b5f08d61db247b30051e3bfdeea6
+      internalID: 1334617638
       vertices: []
       indices: 
       edges: []
@@ -204,10 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spr_player_right_hit_0: -2141647527
-      spr_player_right_hit_1: -1579651841
-      spr_player_right_hit_2: -150542870
-      spr_player_right_hit_3: 2108612118
+      Shadows_Sheet_0: 917944642
+      Shadows_Sheet_1: 518700807
+      Shadows_Sheet_2: 1334617638
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
