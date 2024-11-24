@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class PlayerController : Singleton<PlayerController>
     private SpriteRenderer mySpriteRender;
     private Knockback knockback;
     private float startingMoveSpeed;
+
 
     private bool facingLeft = false;
     private bool isDashing = false;
@@ -85,7 +87,7 @@ public class PlayerController : Singleton<PlayerController>
     private void AdjustPlayerFacingDirection()
     {
         if (PlayerHealth.Instance.isDead) { return; }
-        
+
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
 
@@ -109,6 +111,7 @@ public class PlayerController : Singleton<PlayerController>
             isDashing = true;
             moveSpeed *= dashSpeed;
             myTrailRenderer.emitting = true;
+            AudioManager.Instance.PlaySFX("Dash1");
             StartCoroutine(EndDashRoutine());
         }
     }
@@ -123,4 +126,24 @@ public class PlayerController : Singleton<PlayerController>
         yield return new WaitForSeconds(dashCD);
         isDashing = false;
     }
+
+    public void PlayFootstepSound()
+    {
+        if (!PlayerHealth.Instance.isDead)
+        {
+            // string[] footsteps = { "Footstep", "Footstep2", "Footstep3", "Footstep4", };
+            // // Create a Random instance
+            // System.Random random = new System.Random();
+
+            // // Get a random index
+            // int randomIndex = random.Next(footsteps.Length);
+
+            // // Access the random element
+            // string randomFootstep = footsteps[randomIndex];
+
+            // AudioManager.Instance.PlaySFX(randomFootstep);
+            AudioManager.Instance.PlaySFX("Footstep");
+        }
+    }
+
 }

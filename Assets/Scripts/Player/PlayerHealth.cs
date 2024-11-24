@@ -44,11 +44,11 @@ public class PlayerHealth : Singleton<PlayerHealth>
         {
             TakeDamage(1, other.transform);
         }
-    }
 
+    }
     public void HealPlayer()
     {
-        if (currentHealth < maxHealth)
+        if (currentHealth < maxHealth && !isDead)
         {
             currentHealth += 1;
             UpdateHealthSlider();
@@ -66,6 +66,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
         currentHealth -= damageAmount;
         StartCoroutine(DamageRecoveryRoutine());
 
+        AudioManager.Instance.PlaySFX("TakeDamage");
         UpdateHealthSlider();
         CheckIfPlayerDeath();
     }

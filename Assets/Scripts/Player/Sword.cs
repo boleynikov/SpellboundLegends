@@ -57,6 +57,8 @@ public class Sword : MonoBehaviour, IWeapon
         {
             slashAnim.GetComponent<SpriteRenderer>().flipX = true;
         }
+
+        AudioManager.Instance.PlaySFX("Sword1");
     }
 
     public void SwingDownFlipAnimEvent()
@@ -67,6 +69,8 @@ public class Sword : MonoBehaviour, IWeapon
         {
             slashAnim.GetComponent<SpriteRenderer>().flipX = true;
         }
+
+        AudioManager.Instance.PlaySFX("Sword2");
     }
 
     private void MouseFollowWithOffset()

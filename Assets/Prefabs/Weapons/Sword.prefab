@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0a97bdb456d65a0428ccd23b765ba6c8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00fbdf03eaeb77e4d8cd2d9930ceb403, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,5 +121,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slashAnimPrefab: {fileID: 8056735684616294599, guid: e72281fc89e02fe4fb50c8a3f510d420, type: 3}
   slashAnimSpawnPoint: {fileID: 0}
-  swordAttackCD: 0.5
   weaponInfo: {fileID: 11400000, guid: fd7fafe4bd8a0e4458b9bba5e2e28ffe, type: 2}

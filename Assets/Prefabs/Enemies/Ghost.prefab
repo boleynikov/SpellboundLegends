@@ -262,8 +262,8 @@ MonoBehaviour:
   startingDistance: 0.3
   timeBetweenBursts: 1
   restTime: 0.1
-  stagger: 1
-  oscillate: 1
+  stagger: 0
+  oscillate: 0
 --- !u!210 &4407875224055055290
 SortingGroup:
   m_ObjectHideFlags: 0

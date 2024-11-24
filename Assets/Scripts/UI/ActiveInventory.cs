@@ -74,5 +74,6 @@ public class ActiveInventory : Singleton<ActiveInventory>
         // newWeapon.transform.parent = ActiveWeapon.Instance.transform;
 
         ActiveWeapon.Instance.NewWeapon(newWeapon.GetComponent<MonoBehaviour>());
+        AudioManager.Instance.PlayUISound("changeWeaponSound");
     }
 }

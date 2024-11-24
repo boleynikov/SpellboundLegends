@@ -29,8 +29,8 @@ public class Staff : MonoBehaviour, IWeapon
     }
     public void Attack()
     {
-        Debug.Log("Staff attack");
         myAnimator.SetTrigger(ATTACK_HASH);
+        AudioManager.Instance.PlaySFX("StaffAttack");
     }
 
     public WeaponInfo GetWeaponInfo()

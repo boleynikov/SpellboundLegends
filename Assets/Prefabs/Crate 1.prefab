@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69dace70b35feb348a8985d0deb5fdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructibleType: 1
   destroyVFX: {fileID: 2187398445689820816, guid: 854b73f7a6cb7e64dbcef0a14ae295af, type: 3}
 --- !u!114 &7095691326481370692
 MonoBehaviour:

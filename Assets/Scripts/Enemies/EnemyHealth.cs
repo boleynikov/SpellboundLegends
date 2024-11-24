@@ -29,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= damage;
         knockback.GetKnockedBack(PlayerController.Instance.transform, knockBackThrust);
         StartCoroutine(flash.FlashRoutine());
+        AudioManager.Instance.PlaySFX("PunchHurt");
         StartCoroutine(CheckDetectDeathRoutine());
     }
     private IEnumerator CheckDetectDeathRoutine() {

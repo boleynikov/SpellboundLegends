@@ -79,12 +79,16 @@ public class Pickup : MonoBehaviour
         {
             case PickUpType.GoldCoin:
                 EconomyManager.Instance.UpdateCurrentGold();
+                AudioManager.Instance.PlaySFX("CoinPickup");
                 break;
             case PickUpType.HealthGlobe:
                 PlayerHealth.Instance.HealPlayer();
+                AudioManager.Instance.PlaySFX("HealthPickup");
                 break;
             case PickUpType.StaminaGlobe:
                 Stamina.Instance.RefreshStamina();
+                AudioManager.Instance.PlaySFX("StaminaPickup");
+
                 break;
         }
     }

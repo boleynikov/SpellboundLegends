@@ -5,28 +5,43 @@ using UnityEngine;
 public class Grape : MonoBehaviour, IEnemy
 {
     [SerializeField] private GameObject grapeProjectilePrefab;
+    [SerializeField] private float hatManAttackSoundDelay = 0.3f;
 
     private Animator myAnimator;
     private SpriteRenderer spriteRenderer;
 
     readonly int ATTACK_HASH = Animator.StringToHash("Attack");
 
-    private void Awake() {
+    private void Awake()
+    {
         myAnimator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void Attack() {
+    public void Attack()
+    {
         myAnimator.SetTrigger(ATTACK_HASH);
 
-        if (transform.position.x - PlayerController.Instance.transform.position.x < 0) {
+        if (transform.position.x - PlayerController.Instance.transform.position.x < 0)
+        {
             spriteRenderer.flipX = false;
-        } else {
+        }
+        else
+        {
             spriteRenderer.flipX = true;
         }
+
+        StartCoroutine(HatManAttackSoundRoutine());
     }
 
-    public void SpawnProjectileAnimEvent() {
+    private IEnumerator HatManAttackSoundRoutine()
+    {
+        yield return new WaitForSeconds(hatManAttackSoundDelay);
+        AudioManager.Instance.PlaySFX("HatManAttack");
+    }
+
+    public void SpawnProjectileAnimEvent()
+    {
         Instantiate(grapeProjectilePrefab, transform.position, Quaternion.identity);
     }
 }

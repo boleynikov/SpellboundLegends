@@ -75,6 +75,8 @@ public class Shooter : MonoBehaviour, IEnemy
                 GameObject newBullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
                 newBullet.transform.right = newBullet.transform.position - transform.position;
 
+                if (!stagger) { AudioManager.Instance.PlaySFX("GhostAttack"); }
+
                 if (newBullet.TryGetComponent(out Projectile projectile))
                 {
                     projectile.UpdateMoveSpeed(bulletMoveSpeed);
@@ -86,7 +88,7 @@ public class Shooter : MonoBehaviour, IEnemy
             }
 
             currentAngle = startAngle;
-
+            if (stagger) { AudioManager.Instance.PlaySFX("GhostAttack"); }
             if (!stagger) { yield return new WaitForSeconds(timeBetweenBursts); }
         }
 

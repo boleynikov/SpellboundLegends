@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4211794465811465601}
   - component: {fileID: 4914783903856974504}
   - component: {fileID: 7027474702395576510}
+  - component: {fileID: 1864089056340030099}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -165,3 +166,17 @@ MonoBehaviour:
   particleOnHitPrefabVFX: {fileID: 2039690354057543433, guid: e824bf92aa84b1843a2985dbd27de18d, type: 3}
   isEnemyProjectile: 1
   projectileRange: 30
+--- !u!114 &1864089056340030099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951877788546460287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69dace70b35feb348a8985d0deb5fdd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructibleType: 2
+  destroyVFX: {fileID: 2039690354057543433, guid: e824bf92aa84b1843a2985dbd27de18d, type: 3}
