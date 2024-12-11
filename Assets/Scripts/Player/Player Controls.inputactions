@@ -192,6 +192,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Interact",
+            "id": "3849ae72-7906-4867-8ae1-ea4a59088adb",
+            "actions": [
+                {
+                    "name": "Talk",
+                    "type": "Button",
+                    "id": "caa8053c-7f58-4d01-88c4-1cb343127e79",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ContinueTalk",
+                    "type": "Button",
+                    "id": "59faaa3d-a35b-4be9-83bf-64878aeb5bed",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6b47c0b9-f9a5-496e-97fd-c712b7871e2b",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Talk",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "13fef904-ac21-4d54-8ba8-d0e9a8ab5513",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ContinueTalk",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

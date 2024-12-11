@@ -57,6 +57,12 @@ public class PlayerController : Singleton<PlayerController>
     private void Update()
     {
         PlayerInput();
+
+        // Check if the Escape key is pressed
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitGame();
+        }
     }
 
     private void FixedUpdate()
@@ -80,13 +86,13 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Move()
     {
-        if (knockback.GettingKnockedBack || PlayerHealth.Instance.isDead) { return; }
+        if (knockback.GettingKnockedBack || PlayerHealth.Instance.isDead || DialogueManager.Instance.dialogueIsPlaying) { return; }
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
 
     private void AdjustPlayerFacingDirection()
     {
-        if (PlayerHealth.Instance.isDead) { return; }
+        if (PlayerHealth.Instance.isDead || DialogueManager.Instance.dialogueIsPlaying) { return; }
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
@@ -105,7 +111,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Dash()
     {
-        if (!isDashing && Stamina.Instance.CurrentStamina > 0)
+        if (!isDashing && Stamina.Instance.CurrentStamina > 0 && !DialogueManager.Instance.dialogueIsPlaying)
         {
             Stamina.Instance.UseStamina();
             isDashing = true;
@@ -146,4 +152,12 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
+    void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; // Stops play mode in the Editor
+#else
+        Application.Quit(); // Quits the application
+#endif
+    }
 }

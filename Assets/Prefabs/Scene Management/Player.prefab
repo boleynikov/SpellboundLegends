@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 3275174149011100039}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 114026638, guid: d37517ba52265644dbf6fe6b3137b0ee, type: 3}
+  m_Sprite: {fileID: 419661371, guid: de42e0c888ab8464e9df67a6dac1262c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bcb53c786c7234a89ce8391e854196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 5
   dashSpeed: 4
   myTrailRenderer: {fileID: 4798091507926933226}
   weaponCollider: {fileID: 8145009074773029292}

@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8715434585661076726}
   - component: {fileID: 4404375233304284728}
   - component: {fileID: -7495152453340728926}
+  - component: {fileID: 3806289824815938637}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -168,8 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roamChangeDirFloat: 2
-  attackRange: 0
-  enemyType: {fileID: 0}
+  attackRange: 3
+  enemyType: {fileID: 3806289824815938637}
   attackCooldown: 2
   stopMovingWhileAttacking: 0
 --- !u!114 &6099746649900862936
@@ -263,3 +264,15 @@ MonoBehaviour:
   goldCoin: {fileID: 4859586729565430077, guid: 0e1d1827247e4b64e8f2f35f0fb86526, type: 3}
   healthGlobe: {fileID: 4859586729565430077, guid: 5e3fe172d0e2a66439216a56b83f259c, type: 3}
   staminaGlobe: {fileID: 4859586729565430077, guid: 9984b7b364a275e42887f5ca962574c8, type: 3}
+--- !u!114 &3806289824815938637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4471500383697985615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76848d625f095184d91a81307e4fee2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
